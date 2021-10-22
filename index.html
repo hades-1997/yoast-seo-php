@@ -60,5 +60,22 @@
             }
         });
     </script>
+    <script>
+        const str1 = "cho thuê nhà, nhà thuê, thuê biệt thự";
+        const regex = /[.,]/g;
+
+        const str = str1.replace(regex, '')
+        const findDuplicateWords = str => {
+           const strArr = str.split(" ");
+           let res = 0;
+           for(let i = 0; i < strArr.length - 1; i++){
+              if(strArr[i] === 'thuê'){
+                 res += 1
+              };
+           };
+           return res
+        };
+        console.log(findDuplicateWords(str));
+</script>
 </body>
 </html>
